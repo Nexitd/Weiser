@@ -1,0 +1,10 @@
+.sliderRow {
+	display: flex !important;
+}
+
+.sliderRow img {
+	width: 270px;
+	height: 211px;
+	margin: 20px auto;
+}
+
