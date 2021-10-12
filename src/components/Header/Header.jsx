@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
+import { Anchor } from "antd";
 import rus from "../../assets/images/Header/Russia.png";
 import eng from "../../assets/images/Header/Unitedkingdom.png";
 import styles from "./Header.module.css";
 
 const Header = () => {
+	const [isMenuVisible, setMenuVisible] = useState(false);
+
+	const { Link } = Anchor;
 	return (
 		<div className={styles.navbar__container}>
 			<nav className={classNames(styles.navbar__container_burger, styles.fix)}>
-				<span id="trigger" className={styles.trigger}></span>
+				<span
+					className={
+						isMenuVisible
+							? classNames(styles.trigger, styles.active)
+							: styles.trigger
+					}
+					onClick={() => setMenuVisible(prev => !prev)}
+				></span>
 			</nav>
-			<div className={styles.navbar__container_menu} id="menu">
+			<div
+				className={
+					isMenuVisible
+						? classNames(styles.navbar__container_menu, styles.show__menu, styles.animate)
+						: styles.navbar__container_menu
+				}
+			>
 				<header>
 					<div className={styles.header__container}>
 						<div className={styles.nav__item}>
@@ -19,28 +36,28 @@ const Header = () => {
 							</p>
 						</div>
 						<div className={styles.nav__item}>
-							<ul className={styles.nav__list}>
-								<li className={styles.list__item}>
-									<a href="#general" className={styles.list__link}>
-										Главная
-									</a>
-								</li>
-								<li className={styles.list__item}>
-									<a href="#about" className={styles.list__link}>
-										О компании
-									</a>
-								</li>
-								<li className={styles.list__item}>
-									<a href="#works" className={styles.list__link}>
-										Наши работы
-									</a>
-								</li>
-								<li className={styles.list__item}>
-									<a href="#contact" className={styles.list__link}>
-										Контакты
-									</a>
-								</li>
-							</ul>
+							<Anchor className={styles.nav__list}>
+								<Link
+									href="#general"
+									title="Главная"
+									className={styles.list__link}
+								/>
+								<Link
+									href="#about"
+									title="О компании"
+									className={styles.list__link}
+								/>
+								<Link
+									href="#works"
+									title="Наши работы"
+									className={styles.list__link}
+								/>
+								<Link
+									href="#contact"
+									title="Контакты"
+									className={styles.list__link}
+								/>
+							</Anchor>
 						</div>
 						<div className={styles.nav__item}>
 							<div className={styles.header__select}>

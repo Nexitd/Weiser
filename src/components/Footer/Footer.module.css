@@ -1,0 +1,36 @@
+.footer {
+	padding: 36px 0;
+	width: 100%;
+	background: #2e2e2e;
+}
+
+@media (max-width: 450px) {
+	.footer {
+		padding: 20px 0;
+	}
+}
+
+.footer__container {
+	max-width: 1240px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 450px) {
+	.footer__container {
+		flex-direction: column;
+	}
+}
+
+.footer__text {
+  margin-bottom: 0;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0.02em;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+}

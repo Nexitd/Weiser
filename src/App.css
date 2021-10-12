@@ -2,3 +2,31 @@
 	margin: 0;
 	padding: 0;
 }
+
+/* .ant-carousel .slick-dots li.slick-active button {
+	background: rgba(94, 206, 161, 0.8) !important;
+}
+
+.ant-carousel .slick-dots button {
+	background: #c4c4c4 !important;
+	width: 20px !important;
+	height: 20px !important;
+	border-radius: 50% !important;
+	margin-top: 30px;
+}
+
+.ant-carousel .slick-dots li {
+	margin-right: 10px !important;
+} */
+
+.ant-anchor-ink::before {
+	width: 0 !important;
+}
+
+.ant-affix {
+	position: static !important;
+}
+
+.ant-anchor-ink-ball {
+	display: none !important;
+}
