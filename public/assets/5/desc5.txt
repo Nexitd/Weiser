@@ -1,0 +1,7 @@
+HTML, SCSS, CSS, Vanilla, gulp, Node.js
+
+Frontend & Backend development and support of a landing page for a legal consultations bureau.
+
+The design of the website was created according to the client's requirements.
+
+Functionality implemented: feedback form, Google maps integration, internal CRM integration.

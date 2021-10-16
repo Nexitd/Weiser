@@ -10,6 +10,8 @@ import left from "../../assets/images/Slider/кнопка листать.svg";
 import right from "../../assets/images/Slider/кнопка листать 2.svg";
 import styles from "./Slider.module.css";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+import { getRusFullPortfolioInfo, getEngFullPortfolioInfo } from "../../store/reducers/portfolioReducer";
 
 const contentStyle = {
 	height: "100%",
@@ -18,9 +20,11 @@ const contentStyle = {
 	padding: "20px",
 };
 
-const Slider = () => {
+const Slider = ({locale}) => {
 	const carousel = React.createRef();
 	const history = useHistory();
+	const dispatch = useDispatch();
+
 	const [windowSize, setWindowSize] = useState("1920");
 
 	useEffect(() => {
@@ -40,7 +44,8 @@ const Slider = () => {
 		carousel.current.prev();
 	};
 
-	const getFullPortfolio = () => {
+	const getFullPortfolio = (id) => {
+		locale.lang === "rus" ? dispatch(getRusFullPortfolioInfo(id)) : dispatch(getEngFullPortfolioInfo(id))
 		history.push("/portfolio");
 	};
 
@@ -58,23 +63,23 @@ const Slider = () => {
 				}
 			>
 				<div className={styles.sliderRow}>
-					<img src={pic1} alt="" onClick={getFullPortfolio} />
+					<img src={pic1} alt="" onClick={() => getFullPortfolio(1)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic2} alt="" onClick={getFullPortfolio} />
+					<img src={pic2} alt="" onClick={() => getFullPortfolio(2)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic3} alt="" onClick={getFullPortfolio} />
+					<img src={pic3} alt="" onClick={() => getFullPortfolio(3)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic4} alt="" onClick={getFullPortfolio} />
+					<img src={pic4} alt="" onClick={() => getFullPortfolio(4)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic5} alt="" onClick={getFullPortfolio} />
+					<img src={pic5} alt="" onClick={() => getFullPortfolio(5)} />
 				</div>
 
 				<div className={styles.sliderRow}>
-					<img src={pic6} alt="" onClick={getFullPortfolio} />
+					<img src={pic6} alt="" onClick={() => getFullPortfolio(6)} />
 				</div>
 			</Carousel>
 			<button onClick={previous} className={styles.prev}>

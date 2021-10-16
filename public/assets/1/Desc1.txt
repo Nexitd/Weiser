@@ -1,0 +1,8 @@
+Symfony, HTML, SCSS, Vue.js
+
+Frontend & Backend development and support of a website for a big industrial safety company (more than 8 years of experience and 300+ clients).
+
+The design of the website was created according to the company's branding.
+
+Functionality implemented: smart sliders, smart quiz, e-mail feedback form, cookie block, comfortable page surfing.
+

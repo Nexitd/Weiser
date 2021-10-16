@@ -1,0 +1,7 @@
+JavaScript, Yii2, HTML, Slick, jQuery, Less
+
+Frontend & Backend development and support of a website for a company that provides balloon flights.
+
+The design of the website was created according to the company's branding.
+
+Functionality implemented: smart sliders, e-mail feedback form, cookie block, website adjusted for comfortable page surfing.

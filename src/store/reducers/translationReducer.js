@@ -1,18 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { rus, eng } from "../../utils/translation";
+
 
 export const translationReducer = createSlice({
 	name: "translation",
 	initialState: {
-		translation: "rus",
+		translation: rus,
 	},
 
 	reducers: {
-		translate: state => {
-			state.translation = "eng";
+		translateToRus: (state) => {
+			state.translation = rus;
+		},
+
+		translateToEng: (state) => {
+			state.translation = eng;
 		},
 	},
 });
 
-export const { translate } = translationReducer.actions;
+export const { translateToRus, translateToEng } = translationReducer.actions;
 
 export default translationReducer.reducer;

@@ -1,0 +1,7 @@
+JavaScript, HTML, CSS, jQuery, API
+
+Frontend development and supporting of a website for a big convention & exhibition center in Saint-Petersburg.
+
+The design was created from scratch according to the client's specifications. 
+
+Functionality implemented: comfortable page surfing, cookie block, page auto-translation, events & news pulled from API.

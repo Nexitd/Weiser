@@ -1,21 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { rus, eng } from "../../utils/translation";
 
 export const portfolioReducer = createSlice({
   name: "portfolio",
   initialState: {
-    id: 0,
-    title: "",
-    text: "",
-    images: [],
+    portfolioData: {},
   },
 
   reducers: {
-    getFullPortfolioInfo: (state) => {
+    getRusFullPortfolioInfo: (state, workId) => {
+      state.portfolioData = rus.portfolio.filter((el) => el.id === workId.payload);
+    },
 
+    getEngFullPortfolioInfo: (state, workId) => {
+      state.portfolioData = eng.portfolio.filter((el) => el.id === workId.payload);
     },
   },
 });
 
-
+export const {
+  getEngFullPortfolioInfo,
+  getRusFullPortfolioInfo,
+} = portfolioReducer.actions;
 
 export default portfolioReducer.reducer;
