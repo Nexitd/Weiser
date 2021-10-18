@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-/* .ant-carousel .slick-dots li.slick-active button {
+.ant-carousel .slick-dots li.slick-active button {
 	background: rgba(94, 206, 161, 0.8) !important;
 }
 
@@ -12,12 +12,12 @@
 	width: 20px !important;
 	height: 20px !important;
 	border-radius: 50% !important;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 .ant-carousel .slick-dots li {
 	margin-right: 10px !important;
-} */
+}
 
 .ant-anchor-ink::before {
 	width: 0 !important;

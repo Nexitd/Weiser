@@ -1,9 +1,0 @@
-CSS, HTML, Bootstrap, SCSS, webpack, Vue.js
-
-Frontend development and support of a website for an IT technical support startup.
-
-The design of the website was created according to the company's requirements.
-
-Functionality implemented: feedback form and pricing package selection. 
-
-The website is being rewritten in the Vue.js framework and was fully redesigned according to the new branding requirements.

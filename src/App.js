@@ -1,8 +1,9 @@
 import React from "react";
 import Main from "./containers/Main/Main";
 import PortfolioFull from "./containers/PortfolioFull/PortfolioFull";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
+import Router from "./routing/Router";
 import "./assets/styles/animate.css";
 import "antd/dist/antd.css";
 import "./App.css";
@@ -12,8 +13,19 @@ const App = () => {
 
 	return (
 		<BrowserRouter>
-			<Route exact path="/" render={() => <Main locale={translation} />} />
-			<Route path="/portfolio" render={() => <PortfolioFull locale={translation} />} />
+			<Switch>
+				<Router
+					exact
+					path="/"
+					locale={translation}
+					render={() => <Main locale={translation} />}
+				/>
+				<Router
+					path="/portfolio/:id"
+					locale={translation}
+					render={() => <PortfolioFull locale={translation} />}
+				/>
+			</Switch>
 		</BrowserRouter>
 	);
 };

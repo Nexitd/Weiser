@@ -1,7 +1,0 @@
-React, HTML, webpack, CSS, Ant, Laravel
-
-Frontend & backend development, and support of a website for a technical equipment leasing company.
-
-The design of the website was created from scratch and approved without revisions.
-
-Functionality implemented: feedback form, payment form, portfolio section, tabs & sliders.

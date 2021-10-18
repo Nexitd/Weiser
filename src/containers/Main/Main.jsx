@@ -1,8 +1,6 @@
 import React from "react";
-import Header from "../../components/Header";
 import AboutCard from "../../components/AboutCard/AboutCard";
 import Slider from "../../components/Slider";
-import Footer from "../../components/Footer";
 import classNames from "classnames";
 import "../../utils/translation";
 import vec1 from "../../assets/images/General/Vector (1).svg";
@@ -20,11 +18,8 @@ import comp from "../../assets/images/Contact/комп.png";
 import styles from "./Main.module.css";
 
 const Main = ({ locale }) => {
-  console.log(locale);
-
   return (
     <div>
-      <Header locale={locale} />
       <div className={styles.main}>
         <div className={styles.main__container}>
           <div className={styles.general} id='general'>
@@ -181,7 +176,6 @@ const Main = ({ locale }) => {
           </div>
         </div>
       </div>
-      <Footer text={locale.footer} />
     </div>
   );
 };

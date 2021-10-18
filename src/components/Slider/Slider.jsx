@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import { Carousel } from "antd";
 import pic1 from "../../assets/images/Slider/артко.png";
 import pic2 from "../../assets/images/Slider/код.png";
@@ -9,9 +10,7 @@ import pic6 from "../../assets/images/Slider/Полёт (1).png";
 import left from "../../assets/images/Slider/кнопка листать.svg";
 import right from "../../assets/images/Slider/кнопка листать 2.svg";
 import styles from "./Slider.module.css";
-import { useHistory } from "react-router";
-import { useDispatch } from "react-redux";
-import { getRusFullPortfolioInfo, getEngFullPortfolioInfo } from "../../store/reducers/portfolioReducer";
+
 
 const contentStyle = {
 	height: "100%",
@@ -20,10 +19,9 @@ const contentStyle = {
 	padding: "20px",
 };
 
-const Slider = ({locale}) => {
+const Slider = () => {
 	const carousel = React.createRef();
 	const history = useHistory();
-	const dispatch = useDispatch();
 
 	const [windowSize, setWindowSize] = useState("1920");
 
@@ -45,8 +43,7 @@ const Slider = ({locale}) => {
 	};
 
 	const getFullPortfolio = (id) => {
-		locale.lang === "rus" ? dispatch(getRusFullPortfolioInfo(id)) : dispatch(getEngFullPortfolioInfo(id))
-		history.push("/portfolio");
+		history.push(`/portfolio/${id}`);
 	};
 
 	return (
@@ -63,23 +60,23 @@ const Slider = ({locale}) => {
 				}
 			>
 				<div className={styles.sliderRow}>
-					<img src={pic1} alt="" onClick={() => getFullPortfolio(1)} />
+					<img src={pic1} alt="" onClick={() => getFullPortfolio(4)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic2} alt="" onClick={() => getFullPortfolio(2)} />
+					<img src={pic2} alt="" onClick={() => getFullPortfolio(6)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic3} alt="" onClick={() => getFullPortfolio(3)} />
+					<img src={pic3} alt="" onClick={() => getFullPortfolio(1)} />
 				</div>
 				<div className={styles.sliderRow}>
-					<img src={pic4} alt="" onClick={() => getFullPortfolio(4)} />
+					<img src={pic4} alt="" onClick={() => getFullPortfolio(3)} />
 				</div>
 				<div className={styles.sliderRow}>
 					<img src={pic5} alt="" onClick={() => getFullPortfolio(5)} />
 				</div>
 
 				<div className={styles.sliderRow}>
-					<img src={pic6} alt="" onClick={() => getFullPortfolio(6)} />
+					<img src={pic6} alt="" onClick={() => getFullPortfolio(2)} />
 				</div>
 			</Carousel>
 			<button onClick={previous} className={styles.prev}>
