@@ -22,10 +22,13 @@ const Header = ({ locale }) => {
 		lang === "rus"
 			? dispatch(translateToRus(lang))
 			: dispatch(translateToEng(lang));
+
+		setMenuVisible(false);
 	};
 
 	const backMain = () => {
 		history.push("/");
+		setMenuVisible(false);
 	};
 
 	return (
@@ -59,7 +62,14 @@ const Header = ({ locale }) => {
 							</p>
 						</div>
 						<div className={styles.nav__item}>
-							<Anchor className={styles.nav__list}>
+							<Anchor
+								className={styles.nav__list}
+								onClick={e => {
+									e.preventDefault();
+									history.push("/");
+									setMenuVisible(false);
+								}}
+							>
 								<Link
 									href="#general"
 									title={locale.headerMain}

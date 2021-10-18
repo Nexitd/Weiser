@@ -35,11 +35,15 @@
 
 @media (min-width: 451px) and (max-width: 1260px) {
 	.about__item_section {
-		width: 100%;
+		width: 45%;
 		max-width: 50%;
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
+
+  .about__item_section:first-of-type {
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 900px) {

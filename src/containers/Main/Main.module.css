@@ -424,6 +424,11 @@
 	font-size: 18px;
 	font-weight: normal;
 	margin-right: 15px;
+	margin-bottom: 0;
+}
+
+.link {
+	margin-top: 5px;
 }
 
 .contact__item_block {
@@ -438,7 +443,7 @@
 @media (max-width: 450px) {
 	.contact__item_block:last-of-type {
 		width: 100%;
-		justify-content: space-around !important;
+		/* justify-content: space-around !important; */
 	}
 }
 .contact__item_block:nth-child(2) {

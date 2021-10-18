@@ -11,7 +11,6 @@ import left from "../../assets/images/Slider/кнопка листать.svg";
 import right from "../../assets/images/Slider/кнопка листать 2.svg";
 import styles from "./Slider.module.css";
 
-
 const contentStyle = {
 	height: "100%",
 	maxWidth: "1440px",
@@ -23,11 +22,10 @@ const Slider = () => {
 	const carousel = React.createRef();
 	const history = useHistory();
 
-	const [windowSize, setWindowSize] = useState("1920");
+	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
 	useEffect(() => {
 		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
 	const handleResize = () => {
@@ -42,7 +40,7 @@ const Slider = () => {
 		carousel.current.prev();
 	};
 
-	const getFullPortfolio = (id) => {
+	const getFullPortfolio = id => {
 		history.push(`/portfolio/${id}`);
 	};
 
@@ -56,7 +54,7 @@ const Slider = () => {
 				draggable
 				slidesToScroll={1}
 				slidesToShow={
-					windowSize < 1100 && windowSize > 500 ? 3 : windowSize < 500 ? 1 : 4
+					windowSize > 500 && windowSize < 1100 ? 3 : windowSize > 1100 ? 4 : 1
 				}
 			>
 				<div className={styles.sliderRow}>

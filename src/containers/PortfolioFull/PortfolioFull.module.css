@@ -70,13 +70,11 @@
 }
 
 .worksCont img {
-	width: 200px;
+	width: 100%;
 	height: auto;
 	border-radius: 20px;
-	margin: 0 auto;
 	cursor: pointer;
 }
-
 
 /* media */
 
@@ -109,6 +107,11 @@
 		order: 2 !important;
 		width: 100%;
 		margin: 20px 0;
+		padding: 20px;
+	}
+
+	.worksCont {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	.works {
@@ -117,7 +120,13 @@
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 900px) {
+	.worksCont {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 550px) {
 	.worksCont {
 		grid-template-columns: 1fr;
 	}

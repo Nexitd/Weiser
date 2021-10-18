@@ -1,19 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rus, eng } from "../../utils/translation";
 
+const RUSSIAN_LANGUAGE_CODE = "ru-RU";
+
+let language = window.navigator.language === RUSSIAN_LANGUAGE_CODE ? rus : eng;
 
 export const translationReducer = createSlice({
 	name: "translation",
+	language: window.navigator.language,
 	initialState: {
-		translation: rus,
+		translation: language,
 	},
 
 	reducers: {
-		translateToRus: (state) => {
+		translateToRus: state => {
 			state.translation = rus;
 		},
 
-		translateToEng: (state) => {
+		translateToEng: state => {
 			state.translation = eng;
 		},
 	},

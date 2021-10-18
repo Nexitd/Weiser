@@ -30,3 +30,7 @@
 .ant-anchor-ink-ball {
 	display: none !important;
 }
+
+.ant-anchor-link:last-of-type {
+	padding: 7px 0 7px 16px;
+}

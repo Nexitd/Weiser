@@ -17,6 +17,7 @@
 .prev {
 	position: absolute;
 	top: 50%;
+	transform: translateY(-50%);
 	display: block;
 	border: none;
 	background: transparent;
@@ -37,6 +38,18 @@
 	}
 
 	.sliderRow img {
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+	.sliderRow {
+		margin-left: 0;
+	}
+
+	.sliderRow img {
+		width: 220px;
+		object-fit: cover;
 		margin: 0 auto;
 	}
 }
